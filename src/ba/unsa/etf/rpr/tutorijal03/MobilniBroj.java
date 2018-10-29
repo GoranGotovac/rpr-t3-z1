@@ -5,6 +5,12 @@ public class MobilniBroj extends TelefonskiBroj  {
     MobilniBroj(int mobilnaMreza, String broj) {
         this.broj = "0" + mobilnaMreza + "/" + broj;
     }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
     public String ispisi() {
         return broj;
     }
