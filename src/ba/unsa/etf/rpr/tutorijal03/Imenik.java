@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class Imenik {
     HashMap Imenik = new HashMap();
@@ -12,14 +13,22 @@ public class Imenik {
     }
 
     public String dajBroj(String ime) {
-        TelefonskiBroj b;
-        b = (TelefonskiBroj) Imenik.get(ime);
-        String c = (String) b.ispisi();
+        TelefonskiBroj broj1;
+        broj1 = (TelefonskiBroj) Imenik.get(ime);
+        String c = (String) broj1.ispisi();
         return c;
     }
 
     public String dajIme(TelefonskiBroj broj) {
-        String c = (String) Imenik2.get(broj);
-        return c;
+        String ime1 = (String) Imenik2.get(broj);
+        return ime1;
+    }
+
+    public Set<String> izGrada(FiksniBroj.Grad sarajevo) {
+
+    }
+
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad sarajevo) {
+
     }
 }
