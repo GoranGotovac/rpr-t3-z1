@@ -23,6 +23,7 @@ public class Imenik {
                     return m.getKey();
             }
         }
+        return null;
     }
 
     public Set<String> izGrada(FiksniBroj.Grad grad) {
