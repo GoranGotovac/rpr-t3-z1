@@ -10,7 +10,7 @@ public class Main {
 				"Spisak pozivnih brojeva se može naći ovdje. Umjesto imena kantona koristite ime glavnog grada kantona (kao u primjeru iznad), a umjesto Brčko distrikta stavite BRCKO. Metoda ispisi() treba vratiti broj oblika \"033/123-456\".\n" +
 				"MobilniBroj ima konstruktor MobilniBroj(int mobilnaMreza, String broj) pri čemu oznaka mobilne mreže predstavlja drugu i treću cifru pozivnog broja tj. 60-67 (detaljnije informacije možete naći na istoj stranici). Metoda ispisi vraća broj istog oblika \"061/987-654\".\n" +
 				"MedunarodniBroj ima konstruktor MedunarodniBroj(String drzava, String broj) pri čemu string drzava sadrži kompletan pozivni broj za državu npr. \"+387\".\n" +
-				"Klasa Imenik omogućuje da se pretražuju brojevi koristeći klasu HashMap. Ova klasa treba sadržavati sljedeće javne metode:\n" +
+				"Klasa gradovi omogućuje da se pretražuju brojevi koristeći klasu HashMap. Ova klasa treba sadržavati sljedeće javne metode:\n" +
 				"void dodaj(String ime, TelefonskiBroj broj)\n" +
 				"String dajBroj(String ime) - vraća telefonski broj osobe pod imenom ime u formi stringa pozivajući metodu ispisi() klase TelefonskiBroj,\n" +
 				"String naSlovo(char s) - vraća sve brojeve u telefonskom imeniku za osobe čije ime počinje na slovo s u formatu:\n" +

@@ -1,34 +1,53 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
-import java.util.HashMap;
-import java.util.Set;
+import java.util.*;
 
 public class Imenik {
-    HashMap Imenik = new HashMap();
-    HashMap Imenik2 = new HashMap();
+    HashMap<String, TelefonskiBroj> gradovi = new HashMap<>();
 
     void dodaj(String ime, TelefonskiBroj broj) {
-        Imenik.put(ime, broj);
-        Imenik2.put(broj, ime);
+        gradovi.put(ime, broj);
     }
 
     public String dajBroj(String ime) {
         TelefonskiBroj broj1;
-        broj1 = (TelefonskiBroj) Imenik.get(ime);
+        broj1 = (TelefonskiBroj) gradovi.get(ime);
         String c = (String) broj1.ispisi();
         return c;
     }
 
     public String dajIme(TelefonskiBroj broj) {
-        String ime1 = (String) Imenik2.get(broj);
-        return ime1;
+        for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
+            TelefonskiBroj telefonskiBroj = m.getValue();
+                if (((TelefonskiBroj) telefonskiBroj).ispisi().equals(broj)) {
+                    return m.getKey();
+            }
+        }
     }
 
-    public Set<String> izGrada(FiksniBroj.Grad sarajevo) {
-
+    public Set<String> izGrada(FiksniBroj.Grad grad) {
+        Set<String> set = new TreeSet<>();
+        for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
+            TelefonskiBroj telefonskiBroj = m.getValue();
+            if (telefonskiBroj instanceof FiksniBroj) {
+                if (((FiksniBroj) telefonskiBroj).getGrad().equals(grad)) {
+                    set.add(m.getKey());
+                }
+            }
+        }
+        return set;
     }
 
-    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad sarajevo) {
-
+        public Set<TelefonskiBroj> izGradaBrojevi (FiksniBroj.Grad grad){
+            Set<TelefonskiBroj> set = new TreeSet<>();
+            for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
+                TelefonskiBroj telefonskiBroj = m.getValue();
+                if (telefonskiBroj instanceof FiksniBroj) {
+                    if (((FiksniBroj) telefonskiBroj).getGrad().equals(grad)) {
+                        set.add(m.getValue());
+                    }
+                }
+            }
+            return set;
+        }
     }
-}

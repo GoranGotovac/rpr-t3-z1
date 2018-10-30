@@ -1,8 +1,8 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class FiksniBroj extends TelefonskiBroj {
-    String broj;
-
+    public String broj;
+    private Grad grad;
     FiksniBroj(Grad grad, String broj) {
         if (grad == Grad.SARAJEVO) {
             this.broj="033/" + broj;
@@ -37,7 +37,7 @@ public class FiksniBroj extends TelefonskiBroj {
         if (grad == Grad.BRCKO) {
             this.broj="049/" + broj;
         }
-
+    this.grad = grad;
     }
 
     ;
@@ -52,5 +52,7 @@ public class FiksniBroj extends TelefonskiBroj {
     public String ispisi() {
         return broj;
     }
-
+    public Grad getGrad() {
+        return grad;
+    }
 }
