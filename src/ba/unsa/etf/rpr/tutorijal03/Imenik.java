@@ -39,7 +39,7 @@ public class Imenik {
         return set;
     }
 
-        public Set<TelefonskiBroj> izGradaBrojevi (FiksniBroj.Grad grad){
+    public Set<TelefonskiBroj> izGradaBrojevi (FiksniBroj.Grad grad){
             Set<TelefonskiBroj> set = new TreeSet<>();
             for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
                 TelefonskiBroj telefonskiBroj = m.getValue();
@@ -51,4 +51,16 @@ public class Imenik {
             }
             return set;
         }
-    }
+        public String naSlovo(char g) {
+            String string = "";
+            int i = 1;
+            for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
+                String telefonskiBroj = m.getKey();
+                    if ((Boolean) telefonskiBroj.startsWith(String.valueOf(g))) {
+                        string+=i + ". " + telefonskiBroj+ " - " + m.getValue().ispisi();
+                        i++;
+                    }
+                }
+                return string;
+            }
+}
