@@ -3,41 +3,42 @@ package ba.unsa.etf.rpr.tutorijal03;
 public class FiksniBroj extends TelefonskiBroj {
     public String broj;
     private Grad grad;
+
     FiksniBroj(Grad grad, String broj) {
         if (grad == Grad.SARAJEVO) {
-            this.broj="033/" + broj;
+            this.broj = "033/" + broj;
         }
         if (grad == Grad.BIHAC) {
-            this.broj="037/" + broj;
+            this.broj = "037/" + broj;
         }
         if (grad == Grad.ORASJE) {
-            this.broj="031/" + broj;
+            this.broj = "031/" + broj;
         }
         if (grad == Grad.TUZLA) {
-            this.broj="035/" + broj;
+            this.broj = "035/" + broj;
         }
         if (grad == Grad.ZENICA) {
-            this.broj="032/" + broj;
+            this.broj = "032/" + broj;
         }
         if (grad == Grad.GORAZDE) {
-            this.broj="038/" + broj;
+            this.broj = "038/" + broj;
         }
         if (grad == Grad.TRAVNIK) {
-            this.broj="030/" + broj;
+            this.broj = "030/" + broj;
         }
         if (grad == Grad.MOSTAR) {
-            this.broj="036/" + broj;
+            this.broj = "036/" + broj;
         }
         if (grad == Grad.SIROKIBRIJEG) {
-            this.broj="039/" + broj;
+            this.broj = "039/" + broj;
         }
         if (grad == Grad.LIVNO) {
-            this.broj="034/" + broj;
+            this.broj = "034/" + broj;
         }
         if (grad == Grad.BRCKO) {
-            this.broj="049/" + broj;
+            this.broj = "049/" + broj;
         }
-    this.grad = grad;
+        this.grad = grad;
     }
 
     ;
@@ -52,6 +53,7 @@ public class FiksniBroj extends TelefonskiBroj {
     public String ispisi() {
         return broj;
     }
+
     public Grad getGrad() {
         return grad;
     }

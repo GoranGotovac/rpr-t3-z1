@@ -19,8 +19,8 @@ public class Imenik {
     public String dajIme(TelefonskiBroj broj) {
         for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
             TelefonskiBroj telefonskiBroj = m.getValue();
-                if (((TelefonskiBroj) telefonskiBroj).ispisi().equals(broj)) {
-                    return m.getKey();
+            if (((TelefonskiBroj) telefonskiBroj).ispisi().equals(broj)) {
+                return m.getKey();
             }
         }
         return null;
@@ -39,28 +39,29 @@ public class Imenik {
         return set;
     }
 
-    public Set<TelefonskiBroj> izGradaBrojevi (FiksniBroj.Grad grad){
-            Set<TelefonskiBroj> set = new TreeSet<>();
-            for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
-                TelefonskiBroj telefonskiBroj = m.getValue();
-                if (telefonskiBroj instanceof FiksniBroj) {
-                    if (((FiksniBroj) telefonskiBroj).getGrad().equals(grad)) {
-                        set.add(m.getValue());
-                    }
+    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad grad) {
+        Set<TelefonskiBroj> set = new TreeSet<>();
+        for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
+            TelefonskiBroj telefonskiBroj = m.getValue();
+            if (telefonskiBroj instanceof FiksniBroj) {
+                if (((FiksniBroj) telefonskiBroj).getGrad().equals(grad)) {
+                    set.add(m.getValue());
                 }
             }
-            return set;
         }
-        public String naSlovo(char g) {
-            String string = "";
-            int i = 1;
-            for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
-                String telefonskiBroj = m.getKey();
-                    if ((Boolean) telefonskiBroj.startsWith(String.valueOf(g))) {
-                        string+=i + ". " + telefonskiBroj+ " - " + m.getValue().ispisi();
-                        i++;
-                    }
-                }
-                return string;
+        return set;
+    }
+
+    public String naSlovo(char g) {
+        String string = "";
+        int i = 1;
+        for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
+            String telefonskiBroj = m.getKey();
+            if ((Boolean) telefonskiBroj.startsWith(String.valueOf(g))) {
+                string += i + ". " + telefonskiBroj + " - " + m.getValue().ispisi();
+                i++;
             }
+        }
+        return string;
+    }
 }
