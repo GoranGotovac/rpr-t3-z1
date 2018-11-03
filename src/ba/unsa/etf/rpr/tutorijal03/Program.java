@@ -75,7 +75,7 @@ public class Program {
                     break;
                 case 3:
                     System.out.print("Za  korisnika sa fiksnim brojem tefona unesite broj 0, za korisnika sa mobilnim brojem" +
-                            " unesite broj 1, za korisnika sa međunarodnim brojem unesite broj 2");
+                            " unesite broj 1, za korisnika sa međunarodnim brojem unesite broj 2 \n");
                     b = ulaz.nextInt();
 
                     switch (b) {
