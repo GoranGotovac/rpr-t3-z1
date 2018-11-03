@@ -4,12 +4,14 @@ import java.util.Scanner;
 import java.util.Set;
 
 import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
+
 public class Program {
     public static Scanner ulaz = new Scanner(System.in);
+
     public static void main(String[] args) {
-        String broj, ime, drzava,grad, prvoSlovo, slovo;
+        String broj, ime, drzava, grad, prvoSlovo, slovo;
         Imenik zuteStrane = new Imenik();
-        int a,  b, brojMobitela;
+        int a, b, brojMobitela;
         boolean x, y;
         x = true;
         y = true;
