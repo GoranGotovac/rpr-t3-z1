@@ -7,9 +7,9 @@ import static ba.unsa.etf.rpr.tutorijal03.FiksniBroj.Grad.*;
 public class Program {
     public static Scanner ulaz = new Scanner(System.in);
     public static void main(String[] args) {
-        String broj, ime, drzava,grad;
+        String broj, ime, drzava,grad, prvoSlovo, slovo;
         Imenik zuteStrane = new Imenik();
-        int a, b, brojMobitela;
+        int a,  b, brojMobitela;
         boolean x, y;
         x = true;
         y = true;
@@ -21,6 +21,7 @@ public class Program {
             a = ulaz.nextInt();
             if (a == 7) {
                 x = false;
+                break;
             }
             switch (a) {
                 case 1:
@@ -50,6 +51,7 @@ public class Program {
                                 System.out.print("Unesite mobilnu mrežu: ");
                                 brojMobitela = ulaz.nextInt();
                                 System.out.print("Unesite broj: ");
+                                ulaz.nextLine();
                                 broj = ulaz.nextLine();
                                 System.out.print("Unesite ime: ");
                                 ime = ulaz.nextLine();
@@ -57,6 +59,7 @@ public class Program {
                                 break;
                             case 2:
                                 System.out.print("Unesite pozivni za državu: ");
+                                ulaz.nextLine();
                                 drzava = ulaz.nextLine();
                                 System.out.print("Unesite broj: ");
                                 broj = ulaz.nextLine();
@@ -125,13 +128,12 @@ public class Program {
                     break;
                 case 6:
                     System.out.print("Unesite slovo: ");
-                    String slovo = ulaz.nextLine();
-                    String prvoSlovo = String.valueOf(slovo.charAt(0));
-                    char c = prvoSlovo.charAt(0);
+                    ulaz.nextLine();
+                    slovo = ulaz.nextLine();
+                    char c = String.valueOf(slovo.toUpperCase().charAt(0)).charAt(0);
                     System.out.print(zuteStrane.naSlovo(c));
                     break;
             }
-
         }
     }
 }
