@@ -25,6 +25,7 @@ public class Program {
             }
             switch (a) {
                 case 1:
+                    y = true;
                     while (y) {
                         System.out.print("Za unos korisnika sa fiksnim brojem tefona unesite broj 0\nZa unos korisnika sa mobilnim brojem" +
                                 " unesite broj 1\nZa unos korisnika sa međunarodnim brojem unesite broj 2\nZa prekid unosa korisnika unesite broj 3\n");
@@ -72,6 +73,7 @@ public class Program {
                     break;
                 case 2:
                     System.out.print("Unesite ime korisnika: ");
+                    ulaz.nextLine();
                     ime = ulaz.nextLine();
                     broj = zuteStrane.dajBroj(ime);
                     System.out.println(broj);
