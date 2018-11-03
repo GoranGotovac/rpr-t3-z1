@@ -58,7 +58,7 @@ public class Imenik {
         for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
             String telefonskiBroj = m.getKey();
             if ((Boolean) telefonskiBroj.startsWith(String.valueOf(g))) {
-                string += i + ". " + telefonskiBroj + " - " + m.getValue().ispisi();
+                string += i + ". " + telefonskiBroj + " - " + m.getValue().ispisi() "\n";
                 i++;
             }
         }
