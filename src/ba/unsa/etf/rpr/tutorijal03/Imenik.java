@@ -19,11 +19,11 @@ public class Imenik {
     public String dajIme(TelefonskiBroj broj) {
         for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
             TelefonskiBroj telefonskiBroj = m.getValue();
-            if (((TelefonskiBroj) telefonskiBroj).ispisi().equals(broj)) {
+            if (telefonskiBroj.ispisi().equals(broj.ispisi())) {
                 return m.getKey();
             }
         }
-        return null;
+        return "Taj korisnik nije unesen";
     }
 
     public Set<String> izGrada(FiksniBroj.Grad grad) {
