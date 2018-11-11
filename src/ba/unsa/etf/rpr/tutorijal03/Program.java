@@ -9,7 +9,7 @@ public class Program {
     public static Scanner ulaz = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String broj, ime, drzava, grad, prvoSlovo, slovo;
+        String broj, ime, drzava, grad, slovo;
         Imenik zuteStrane = new Imenik();
         int a, b, brojMobitela;
         boolean x, y;

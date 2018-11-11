@@ -53,15 +53,17 @@ public class Imenik {
     }
 
     public String naSlovo(char g) {
-        String string = "";
+        StringBuilder sb = new StringBuilder();
+        String spisak;
         int i = 1;
         for (Map.Entry<String, TelefonskiBroj> m : gradovi.entrySet()) {
             String telefonskiBroj = m.getKey();
             if ((Boolean) telefonskiBroj.startsWith(String.valueOf(g))) {
-                string += i + ". " + telefonskiBroj + " - " + m.getValue().ispisi() + "\n";
+                sb.append(i).append(". ").append(telefonskiBroj).append(" - ").append(m.getValue().ispisi()).append("\n");
                 i++;
             }
         }
-        return string;
+        spisak = sb.toString();
+        return spisak;
     }
 }
