@@ -29,7 +29,7 @@ public class Program {
                 case 1:
                     y = true;
                     while (y) {
-                        System.out.print("Za unos korisnika sa fiksnim brojem tefona unesite broj 0\nZa unos korisnika sa mobilnim brojem" +
+                        System.out.print("Za unos korisnika sa fiksnim brojem telefona unesite broj 0\nZa unos korisnika sa mobilnim brojem" +
                                 " unesite broj 1\nZa unos korisnika sa međunarodnim brojem unesite broj 2\nZa prekid unosa korisnika unesite broj 3\n");
                         b = ulaz.nextInt();
                         if (b == 3) {
@@ -81,7 +81,7 @@ public class Program {
                     System.out.println(broj);
                     break;
                 case 3:
-                    System.out.print("Za  korisnika sa fiksnim brojem tefona unesite broj 0, za korisnika sa mobilnim brojem" +
+                    System.out.print("Za  korisnika sa fiksnim brojem telefona unesite broj 0, za korisnika sa mobilnim brojem" +
                             " unesite broj 1, za korisnika sa međunarodnim brojem unesite broj 2 \n");
                     b = ulaz.nextInt();
 
