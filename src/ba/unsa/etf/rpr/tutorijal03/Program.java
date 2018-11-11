@@ -11,6 +11,8 @@ public class Program {
     public static void main(String[] args) {
         String broj, ime, drzava, grad, slovo;
         Imenik zuteStrane = new Imenik();
+        String unosGrada = "Unesite grad: ";
+        String unosBroja = "Unesite broj: ";
         int a, b, brojMobitela;
         boolean x, y;
         x = true;
@@ -39,10 +41,10 @@ public class Program {
                         switch (b) {
                             case 0:
 
-                                System.out.print("Unesite grad: ");
+                                System.out.print(unosGrada);
                                 grad = ulaz.next();
                                 FiksniBroj.Grad grad1 = FiksniBroj.Grad.valueOf(grad.toUpperCase());
-                                System.out.print("Unesite broj: ");
+                                System.out.print(unosBroja);
                                 ulaz.nextLine();
                                 broj = ulaz.nextLine();
                                 System.out.print("Unesite ime: ");
@@ -53,7 +55,7 @@ public class Program {
                             case 1:
                                 System.out.print("Unesite mobilnu mrežu: ");
                                 brojMobitela = ulaz.nextInt();
-                                System.out.print("Unesite broj: ");
+                                System.out.print(unosBroja);
                                 ulaz.nextLine();
                                 broj = ulaz.nextLine();
                                 System.out.print("Unesite ime: ");
@@ -64,7 +66,7 @@ public class Program {
                                 System.out.print("Unesite pozivni za državu: ");
                                 ulaz.nextLine();
                                 drzava = ulaz.nextLine();
-                                System.out.print("Unesite broj: ");
+                                System.out.print(unosBroja);
                                 broj = ulaz.nextLine();
                                 System.out.print("Unesite ime: ");
                                 ime = ulaz.nextLine();
@@ -87,9 +89,9 @@ public class Program {
 
                     switch (b) {
                         case 0:
-                            System.out.print("Unesite grad: ");
+                            System.out.print(unosGrada);
                             FiksniBroj.Grad grad1 = FiksniBroj.Grad.valueOf(ulaz.next().toUpperCase());
-                            System.out.print("Unesite broj: ");
+                            System.out.print(unosBroja);
                             ulaz.nextLine();
                             broj = ulaz.nextLine();
                             System.out.println(zuteStrane.dajIme(new FiksniBroj(grad1, broj)));
@@ -97,21 +99,21 @@ public class Program {
                         case 1:
                             System.out.print("Unesite mobilnu mrežu: ");
                             brojMobitela = ulaz.nextInt();
-                            System.out.print("Unesite broj: ");
+                            System.out.print(unosBroja);
                             broj = ulaz.nextLine();
                             System.out.println(zuteStrane.dajIme(new MobilniBroj(brojMobitela, broj)));
                             break;
                         case 2:
                             System.out.print("Unesite pozivni za državu: ");
                             drzava = ulaz.next();
-                            System.out.print("Unesite broj: ");
+                            System.out.print(unosBroja);
                             broj = ulaz.nextLine();
                             System.out.println(zuteStrane.dajIme(new MedunarodniBroj(drzava, broj)));
                             break;
                     }
                     break;
                 case 4:
-                    System.out.print("Unesite grad: ");
+                    System.out.print(unosGrada);
                     FiksniBroj.Grad grad1 = FiksniBroj.Grad.valueOf(ulaz.next().toUpperCase());
                     Set<String> set = zuteStrane.izGrada(grad1);
                     String result = "";
@@ -121,7 +123,7 @@ public class Program {
                     System.out.println(result);
                     break;
                 case 5:
-                    System.out.print("Unesite grad: ");
+                    System.out.print(unosGrada);
                     FiksniBroj.Grad gradNovi = FiksniBroj.Grad.valueOf(ulaz.next().toUpperCase());
                     Set<TelefonskiBroj> set2 = zuteStrane.izGradaBrojevi(gradNovi);
                     String result1 = "";

@@ -12,8 +12,7 @@ public class Imenik {
     public String dajBroj(String ime) {
         TelefonskiBroj broj1;
         broj1 = (TelefonskiBroj) gradovi.get(ime);
-        String c = (String) broj1.ispisi();
-        return c;
+        return  (String) broj1.ispisi();
     }
 
     public String dajIme(TelefonskiBroj broj) {
